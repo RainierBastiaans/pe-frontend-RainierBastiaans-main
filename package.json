@@ -7,7 +7,7 @@
     "antd": "^5.1.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^3.4.1"
   },
   "scripts": {
     "start": "react-scripts start --openssl-legacy-provider start",
