@@ -16,7 +16,7 @@ jobs:
           node-version: 16
       - run: npm install &>/tmp/npmlog.txt
       - run: cat /tmp/npmlog.txt
-      - run: npm test
+      - run: npm test &>/tmp/npmlog.txt
 
   docker:
     runs-on: ubuntu-latest
