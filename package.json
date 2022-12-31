@@ -4,10 +4,10 @@
   "private": true,
   "homepage": "https://github.com/RainierBastiaans/pe-frontend-RainierBastiaans-main2",
   "dependencies": {
-    "antd": "^3.25.0",
+    "antd": "^5.1.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "^3.2.0"
+    "react-scripts": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start --openssl-legacy-provider start",
