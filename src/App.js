@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import ProductCard from './ProductCard'
 import {Col, Row, Button } from 'antd'
-import 'antd/dist/antd.css'
+import './node_modules/antd/dist/antd.css'
 import CollectionForm from './Form'
 
 class App extends Component{
