@@ -2,7 +2,8 @@ version: '3.7'
 
 services:
   front-end:
-    image: rainier1234/frontend
+    image: rainier1234/pe-frontend-rainierbastiaans-main2:latest
+    container_name: "frontend"
     restart: unless-stopped
     environment:
        port: 3000
@@ -10,7 +11,7 @@ services:
       - "3000:3000"
 
   back-end:
-    image: rainier1234/backend
+    image: rainier1234/pe-backend-rainierbastiaans-main:latest
     restart: unless-stopped
     environment:
       MYSQL_HOST: db
