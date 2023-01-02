@@ -1,8 +1,5 @@
 FROM node:16 as builder
-RUN apt-get update && apt-get -y install sudo
-RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
-USER docker
-RUN sudo mkdir /app
+RUN mkdir /app
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY ./package.json ./
