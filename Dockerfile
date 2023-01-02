@@ -3,7 +3,8 @@ RUN mkdir /app
 WORKDIR /app
 COPY ./package.json ./
 COPY ./package-lock.json ./
-RUN npm install install &>/tmp/npmlog.txt
-COPY . ./
+RUN npm install &>/tmp/npmlog.txt
 EXPOSE 3000
+COPY . ./
+
 CMD ["npm", "start"]
