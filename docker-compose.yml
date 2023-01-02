@@ -3,7 +3,6 @@ version: '3.7'
 services:
   front-end:
     image: rainier1234/pe-frontend-rainierbastiaans-main2:latest
-    container_name: "frontend"
     restart: unless-stopped
     environment:
        port: 3000
