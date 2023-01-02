@@ -9,6 +9,8 @@ services:
        port: 3000
     ports:
       - "3000:3000"
+    depends_on:
+      - back-end
 
   back-end:
     image: rainier1234/pe-backend-rainierbastiaans-main:latest
@@ -36,5 +38,3 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_PASSWORD: password
       MYSQL_PORT: 3306
-volumes:
-  db_data: {}
