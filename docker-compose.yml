@@ -3,18 +3,16 @@ version: '3.7'
 services:
   front-end:
     image: rainier1234/pe-frontend-rainierbastiaans-main2:latest
-    restart: unless-stopped
-    environment:
-       port: 3000
+    restart: always
     ports:
       - "3000:3000"
 
   back-end:
     image: rainier1234/pe-backend-rainierbastiaans-main:latest
-    restart: unless-stopped
+    restart: always
     environment:
       MYSQL_HOST: db
-      MYSQL_DATABASE: db
+      MYSQL_NAME: pdb
       MYSQL_USER: admin
       MYSQL_PASSWORD: password
       MYSQL_PORT: 3306
@@ -25,16 +23,16 @@ services:
 
   db:
     image: mysql:5.7
-    restart: unless-stopped
+    restart: always
     ports:
       - 3306:3306
     environment:
-      MYSQL_HOST: sqldb
-      MYSQL_DATABASE: db
+      MYSQL_DATABASE: pdb
       MYSQL_USER: admin
       MYSQL_ROOT_PASSWORD: root
       MYSQL_PASSWORD: password
-      MYSQL_PORT: 3306
+    volumes:
+      - db_data:/var/lib/mysql
 
 volumes:
   db_data: {}
