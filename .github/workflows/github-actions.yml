@@ -35,4 +35,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/pe-frontend-rainierbastiaans-main2
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/pe-frontend-rainierbastiaans-main2:latest
